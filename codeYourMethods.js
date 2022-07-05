@@ -4,31 +4,60 @@
 // const newArr = myMap([1,2,3], (el) => el * 2);
 
 
-function myForEach() {
-
+function myForEach(arr, callback) {
+    for(let i = 0, length = arr.length; i <= length; i++){
+        callback(arr[i]);
+    }
 }
 
-function myMap() {
-
+function myMap(arr, callback) {
+     let callback = [];
+     for(let i = 0, length = arr.length; i <= length; i++){
+        callback.push(arr[i] * 2)
+     }
 }
 
-function myFilter() {
-
+function myFilter(arr, callback) {
+    let arrNew = [];
+    for(let i = 0, length = arr.length; i <= length; i++){
+        if(callback(arr[i] > 2)){
+            arrNew.push(arrNew[i])
+        }
+    }
+    return arrNew;
 }
 
-function myReduce() {
-
+function myReduce(arr, callback) {
+    let newV = 0;
+    for(let i = 0, length = arr.length; i <= length; i++){
+        newV+= arr[i];
+    }
+    return newV;
 }
 
-function myFind() {
-
+function myFind(arr) {
+    for(let i = 0, length = arr.length; i <= length; i++){
+        if(arr[i] < 5){
+        return arr[i];
+        }
+    }
 }
 
-function myEvery() {
-
+function myEvery(arr) {
+    for(let i = 0, length = arr.length; i <= length; i++){
+        if(arr[i] < 5){
+        return false
+        } 
+    }
+    return true;
 }
 
 function mySome() {
-
+    for(let i = 0, length = arr.length; i <= length; i++){
+        if(arr[i] < 5){
+        return true
+        }
+    } 
+    return false;
 }
 
